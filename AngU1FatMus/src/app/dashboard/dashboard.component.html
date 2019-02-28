@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <app-users-list [userList]="userListArray"></app-users-list> <!--send userListArray to the child component-->
+    </div> 
+    <div class="col-lg-6">
+      <app-edit-users (userCreated)="onUserNameAdded($event)" (userDeleted)="onUserNameDelete($event)"></app-edit-users> <!--recieve output from edit-users & run method on (userCreated)-->
+    </div>
+  </div>
+</div>
+
+<!--
+****************NOTES****************
+*Dashboard Component contains two child components: app-users-list & app-edit-users.
+*************************************
+-->
